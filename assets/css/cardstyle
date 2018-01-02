@@ -1,0 +1,4 @@
+.customCard{
+	float: left
+	margin: 3%
+}

@@ -1,0 +1,63 @@
+.customCard{
+	float: left;
+     height: 28%;
+	font-size: 1.8rem;
+	margin-left: 5%;
+	margin-bottom: 5%;
+	background-color: #a2c523;
+	background-color:rgba(44, 120, 115,0.75);
+}
+
+.customCardTitle{
+ text-align: center;
+ margin-top: 4%;
+ color: #ffffff;
+}
+
+.customButton{
+	margin-top: 4%;
+	display: block;
+    margin: auto;
+    background-color: #33b138;
+    border-color: #33b138;
+
+}
+ 
+.c-text{
+	text-align: center;
+	margin-top: 4%;
+	color: #ffffff;
+} 
+
+.customGlpyh {
+	display: inherit;
+    margin-top: 3%;
+	text-align: center;
+}
+
+ul.ingredient-list {
+    display: none;
+}
+
+ul.health-labels-list{
+	display: none;
+}
+
+a.recipeUrl {
+    display: none;
+} 
+
+.modalImg {
+	text-align: center;
+	height: 50%;
+	width: 90%;
+}
+
+
+.modal-body {
+    max-height: 80vh; 
+}
+
+.custom-body {
+  margin-top: 15%;
+}
