@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="UTF-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +16,9 @@
 	src="https://code.jquery.com/jquery-3.2.1.js"
 	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 	crossorigin="anonymous"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -32,10 +36,138 @@
 	<div class = 'container'>
 		<div class="row">
 			<div class="col-xs-8">
+
+				<!-- Button trigger modal -->
+				<div class="wrapper">
+
+				<button class="btn btn-primary btn-lg" class="getRecipes" data-toggle="modal" data-target="#myModalNorm">Get Recipes 
+				</button>
+				</div>
+
+				<!-- Modal -->
+				<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
+				     aria-labelledby="myModalLabel" aria-hidden="true">
+				    <div class="modal-dialog">
+				        <div class="modal-content">
+				            <!-- Modal Header -->
+				            <div class="modal-header">
+				                <button type="button" class="close" 
+				                   data-dismiss="modal">
+				                       <span aria-hidden="true">&times;</span>
+				                       <span class="sr-only">Close</span>
+				                </button>
+				                <h4 class="modal-title" id="myModalLabel">
+				                    My Details
+				                </h4>
+				            </div>
+				            
+				            <!-- Modal Body -->
+				            <div class="modal-body">
+				                
+				                <form role="form">
+				                    <div class="form-group">
+				                     <label for="inputName">Name</label>
+				                         <input type="name" class="form-control"
+				                         id="inputName" placeholder="Name">
+				                         <br>
+				                         <label for="inputFood">What are in in the mood for?</label>
+				                         <input type="name" class="form-control"
+				                         id="inputFood" placeholder="Food">
+				                    </div>
+				                    <br>
+				            		<fieldset class ="group">
+				                    	<legend>Select Dietary Needs</legend>
+
+						                  <ul class="checkbox"> 
+						                    
+						                        <div>
+						                            <input type="checkbox" id="cbVegetarian"  value="vegetarian">
+						                            <label for="cbVegetarian">Vegetarian</label>
+						                        </div>
+						                        <div>
+						                            <input type="checkbox" id="cbPescatarian"  value="pescatarian">
+						                            <label for="cbPescatarian">Pescatarian</label>
+						                        </div>
+						                        <div>
+						                            <input type="checkbox" id="cbGluten" value="gluten">
+						                            <label for="cbGluten">Gluten-Free</label>
+						                        </div>
+						                        <div>
+						                            <input type="checkbox" id="cbVegan" value="vegan">
+						                            <label for="cbVegan">Vegan</label>
+						                        </div>
+						                        <div>
+						                            <input type="checkbox" id="cbKosher" value="kosher">
+						                            <label for="cbKosher">Kosher</label>
+						                        </div>
+						                        <div>
+						                            <input type="checkbox" id="cbPaleo" value="paleo">
+						                            <label for="cbPaleo">Paleo</label>
+						                         <div>
+						                             <input type="checkbox" id="cbShellfish"  value="shellfish">
+						                            <label for="cbShellfish">No Shellfish</label>
+						                        </div>
+						                        <div>
+						                            <input type="checkbox" id="cbFish" value="fish">
+						                            <label for="cbFish">No Fish</label>
+						                        </div>
+						                        <div>
+						                            <input type="checkbox" id="cbNuts"  value="nuts">
+						                            <label for="cbNuts">No Nuts</label>
+						                        </div>         
+						                        <div>
+						                            <input type="checkbox" id="cbEggs"  value="eggs">
+						                            <label for="cbEggs">No Eggs</label>
+						                        </div>
+						                        <div>
+						                            <input type="checkbox" id="cbCowsmilk"  value="milk">
+						                            <label for="cbCowsmilk">No Cow's Milk</label>
+						                        </div>
+						                        <div>
+						                            <input type="checkbox" id="coding" value="wheat">
+						                            <label for="cbWheat">No Wheat</label>
+						                        </div>
+						                        <div>
+						                            <input type="checkbox" id="music" value="soy">
+						                            <label for="cbSoy">No Soy</label>
+						                        </div> 
+					                     	</ul>
+
+				                			<br>
+						                     <label for="inputName">Minimum Amount of Calories</label>
+						                         <input type="number" step="100" class="form-control"
+						                         id="inputMin" placeholder="100">
+
+							                    
+
+							                    
+							                 <br> 
+						                     <label for="inputName">Maximum Amount of Calories</label>
+						                         <input type="number" step ="100" class="form-control"
+						                         id="inputMax" placeholder="600">
+							                   
+
+							            </fieldset>
+
+				        
+				                			<button type="submit" class="btn btn-default">Submit</button>
+				                </form>
+				                
+				         
+				            </div>
+
+				       </div>            
+				            
+				    </div>
+				</div> 
+				<!-- END MODAL -->
+
 				<div id="viewRecipes"></div>
+				<!-- RECIPES WILL APPEAR HERE -->
+
 			</div>
 				
-
+				<!-- PANEL FOR YOUTUBE VIDEOS -->
 			<div class="col-xs-4">
 				<div class="panel">
 					<div class="panel-body" class="technique-panel">
@@ -48,6 +180,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- END PANEL FOR YOUTUBE VIDEOS -->
 		</div>
 		
 		

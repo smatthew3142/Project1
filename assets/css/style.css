@@ -15,11 +15,34 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
- 
-  
 }
 
+.container{
+  width:  max-width:500px;
+}
+
+
+.btn-lg {
+  position: fixed;
+  top: 200px;
+  padding: 15px 32px !Important;
+  font-size: 40px !Important;
+  font-family: 'Merienda', cursive;  
+  background-color: #c62f43 !Important;
+  border-color: #fff !Important;
+}
+
+
+.wrapper {
+    text-align: center;
+}
+
+
 /*SIDEBAR YOUTUBE*/
+.panel h3 {
+  font-family: 'Merienda',  cursive; 
+}
+
 .videoTile {
   position: relative;
   text-align: left;
@@ -61,6 +84,110 @@ a.overImage:link {
       
 }
 /*SIDEBAR YOUTUBE END*/
+
+
+
+/*STYLING MODAL*/
+fieldset.group  { 
+  margin: 0; 
+  padding: 0; 
+  margin-bottom: 1.25em; 
+  padding: .125em; 
+} 
+
+fieldset.group legend { 
+  margin: 0; 
+  padding: 0; 
+  font-weight: bold; 
+  margin-left: 20px; 
+  font-size: 100%; 
+  color: black; 
+} 
+
+
+ul.checkbox  { 
+  margin-left: 20px; 
+  list-style: none; 
+} 
+
+ul.checkbox li input { 
+  margin-right: .25em; 
+} 
+
+ul.checkbox li { 
+  border: 1px transparent solid; 
+  display: inline-block;
+  width: 12em;
+} 
+
+ul.checkbox label { 
+  text-indent: -20px !Important;
+  
+} 
+ul.checkbox li:hover, 
+ul.checkbox li.focus  { 
+  background-color: lightyellow; 
+  border: 1px gray solid; 
+  width: 12em; 
+} 
+.checkbox {
+    -webkit-column-count: 3; 
+    column-count: 3;
+}
+
+legend {
+  border-style: dotted!Important;
+  border-bottom-width: thick!Important;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+  }
+
+.modal h4 {
+  font-family: 'Merienda',  cursive; 
+}
+
+.btn-default{
+  font-family: 'Merienda', cursive;  
+  color: #fff!Important;
+  background-color: #c62f43 !Important;
+  border-color: #fff !Important;
+}
+/*END STYLING MODAL*/
+
+
+/* MEDIA QUERY  for resizing window */
+
+@media screen and (max-width: 990px) {
+
+  .btn-lg {
+  position: relative;
+  top: 200px;
+}
+
+  
+
+@media screen and (max-width: 680px) {
+
+  .btn-lg {
+  position: relative;
+  top: 200px;
+  font-size: 25px !Important;
+}
+
+.checkbox {
+    -webkit-column-count: 2; 
+    column-count: 2;
+}
+
+/* END MEDIA QUERY  for resizing window */
+
+
 
   
 
