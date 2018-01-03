@@ -1,0 +1,75 @@
+header {
+
+  color: white !Important;
+  font-family: 'Merienda', cursive;  
+}
+
+h1{
+  font-size: 80px !Important;
+  padding: 10px;
+}
+
+
+body {
+  background-image: url("../images/salad.jpg"); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+ 
+  
+}
+
+/*SIDEBAR YOUTUBE*/
+.videoTile {
+  position: relative;
+  text-align: left;
+    color: white;
+    margin-bottom: 25px;
+    overflow: hidden;
+  opacity: 0.0;
+    position: relative;
+    -webkit-animation: mymove 1s; 
+    -webkit-animation-fill-mode: forwards;
+    animation: mymove 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mymove {
+    from {right: -35px;}
+    to {right: 0px; opacity: 1.0;}
+
+}
+
+
+a.overImage:link {
+    color: white;
+}
+
+
+
+.overImage {
+  position: absolute;
+    bottom: 0%;
+    left: 0%;
+    transform: translate(2.5%, 0%);
+}
+
+.vidThumb {
+
+    -webkit-filter: brightness(0.60);
+    filter: brightness(0.60);
+      
+}
+/*SIDEBAR YOUTUBE END*/
+
+  
+
+
+
+
+
+
+
+ 
+
+	
