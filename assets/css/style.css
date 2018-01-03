@@ -138,6 +138,7 @@ ul.checkbox li.focus  {
 legend {
   border-style: dotted!Important;
   border-bottom-width: thick!Important;
+  margin: 0px !Important;
 }
 
 .modal-content {
