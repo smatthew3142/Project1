@@ -187,20 +187,36 @@ $(document).on("click",".customCard", function() {
         modalImg.attr("src", recipeImg);
         $(".modal-body").append(modalImg);
        
-                             //   $(this).find("ul=" + $(".tk")
-        //var ingredientsList = $(this).find("ul").attr("class", "ingredient-list").html();
-      // console.log("Ingredients : " + ingredientsList);
+
+       
+       var ingredientLi = $("<div>");
+       ingredientLi.attr("class", "ingredientLi");
+
        var ingredientsList = $(this).find("ul.ingredient-list").html();
        console.log("Ingredients : " + ingredientsList);
-        $(".modal-body").append(ingredientsList);
+      var ingredientsListTitle = $("<h4>");
+       ingredientsListTitle.attr("class" , "ingredientsListTitle");
+       ingredientsListTitle.html("What you'll need");
+      $(modalImg).append(ingredientsListTitle);
+      $(ingredientLi).append(ingredientsList);
+     
+      $(".modal-body").append(ingredientLi);
 
-       var healthLabels = $(this).find("ul.health-labels-list").html();
-       // var healthLabels = $(this).find("ul").attr("class", "health-labels-list").html();
+  
+
+
+
+      /* var healthLabels = $(this).find("ul.health-labels-list").html();
+       
        console.log("health labels" + healthLabels)
-        $(".modal-body").append(healthLabels);
+       var healthLabelTitle = $("<h4>")
+       healthLabelTitle.attr("class" , "ingredientsListTitle")
+       healthLabelTitle.html("This recipe contains")
+      $(".modal-body").append(healthLabelTitle)
+        $(".modal-body").append(healthLabels);*/
 
         
-        var recipeLink = $(this).find("a").html()
+        var recipeLink = $(this).find("a").html();
         console.log(recipeLink);
         
         
