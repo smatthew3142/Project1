@@ -168,14 +168,9 @@ $(document).on("click",".customCard", function() {
 
         // var imgValue =  $(".imgClass").attr("value");
         $(".modal-body").empty();
-        $(".customButton").remove();
-
+        $(".modal-footer").empty();
         var recipeTitle = $(this).find("h4").html();
         console.log(recipeTitle);
-        var modalTitle = $("<h2>" )
-        modalTitle.html(recipeTitle)
-         $(".modal-body").prepend(modalTitle);
-
 
         
        
@@ -186,18 +181,14 @@ $(document).on("click",".customCard", function() {
         modalImg.attr("class", "modalImg" );
         modalImg.attr("src", recipeImg);
         $(".modal-body").append(modalImg);
-       
-                             //   $(this).find("ul=" + $(".tk")
-        //var ingredientsList = $(this).find("ul").attr("class", "ingredient-list").html();
-      // console.log("Ingredients : " + ingredientsList);
-       var ingredientsList = $(this).find("ul.ingredient-list").html();
-       console.log("Ingredients : " + ingredientsList);
-        $(".modal-body").append(ingredientsList);
 
-       var healthLabels = $(this).find("ul.health-labels-list").html();
-       // var healthLabels = $(this).find("ul").attr("class", "health-labels-list").html();
+
+
+       var ingredientsList = $(this).find("ul").find("li").attr("class", "ingredient-list").html();
+       console.log("Ingredients : " + ingredientsList);
+
+       var healthLabels = $(this).find("ul").attr("class", "health-labels-list").html();
        console.log("health labels" + healthLabels)
-        $(".modal-body").append(healthLabels);
 
         
         var recipeLink = $(this).find("a").html()
@@ -208,12 +199,12 @@ $(document).on("click",".customCard", function() {
        var recipeButtonModal= '<a href=" '+ recipeLink +' " class="btn btn-primary centerButtons customButton"> Get the recipe</a>' 
 
 
-    /*    var modalButton = $ ("<a href>")
+        var modalButton = $ ("<a href>")
         modalButton.attr("src" , recipeLink)
         var newModalButton = $ ("<button>")
         newModalButton.attr("class" , "btn btn-primary customButton")
         modalButton.append(newModalButton)
-*/
+
 
 
 
@@ -230,7 +221,7 @@ $(document).on("click",".customCard", function() {
 
 $(document).on("click",".closeModal", function() {
        $(".modal-body").empty();
-       $(".customButton").remove();
+       $(".modal-footer").empty();
 
 
 
