@@ -84,7 +84,7 @@ $("body").on("click","#submit", function cards(event){
    cardText.html("Calories per Serving : " + recipesCals)
    cardBlock.append(cardText)
 
-   var glyph = $("<span>")
+   /*var glyph = $("<span>")
    glyph.attr("class", "glyphicon glyphicon-heart-empty customGlpyh")
    glyph.attr("aria-hidden", "true")
    cardBlock.append(glyph)
@@ -92,7 +92,7 @@ $("body").on("click","#submit", function cards(event){
    
             glyph.attr("data-favorited", "glyphicon glyphicon-heart customGlpyh" );
             glyph.attr("data-not-favorited", "glyphicon glyphicon-heart-empty customGlpyh");
-            glyph.attr("data-state", "not-favorited");
+            glyph.attr("data-state", "not-favorited");*/
 
 
    var cardLink = $("<a href>")
@@ -188,8 +188,11 @@ $(document).on("click",".customCard", function() {
         $(".modal-body").append(modalImg);
        
 
+
+
+
        
-       var ingredientLi = $("<div>");
+       var ingredientLi = $("<div>")
        ingredientLi.attr("class", "ingredientLi");
 
        var ingredientsList = $(this).find("ul.ingredient-list").html();
@@ -197,9 +200,9 @@ $(document).on("click",".customCard", function() {
       var ingredientsListTitle = $("<h4>");
        ingredientsListTitle.attr("class" , "ingredientsListTitle");
        ingredientsListTitle.html("What you'll need");
-      $(modalImg).append(ingredientsListTitle);
+      $(ingredientLi).append(ingredientsListTitle);
       $(ingredientLi).append(ingredientsList);
-     
+   
       $(".modal-body").append(ingredientLi);
 
   
@@ -216,7 +219,7 @@ $(document).on("click",".customCard", function() {
         $(".modal-body").append(healthLabels);*/
 
         
-        var recipeLink = $(this).find("a").html();
+        var recipeLink = $(this).find("a").html()
         console.log(recipeLink);
         
         
