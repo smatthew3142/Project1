@@ -23,13 +23,12 @@ body {
 
 
 .btn-lg {
-  position: fixed;
-  top: 200px;
   padding: 15px 32px !Important;
   font-size: 40px !Important;
   font-family: 'Merienda', cursive;  
   background-color: #c62f43 !Important;
   border-color: #fff !Important;
+  margin: 10px;
 }
 
 
@@ -161,6 +160,29 @@ legend {
 }
 /*END STYLING MODAL*/
 
+/*RECIPE MODAL*/
+
+.recipe-modal-body h2{
+  font-family: 'Merienda',  cursive; 
+}
+
+.recipe-modal-body p{
+  word-wrap: break-word;
+}
+
+a.btn.btn-primary.centerButtons.customButton{
+  background-color: #2c7873 !Important;
+  font-family: 'Merienda', cursive;  
+  color: #fff!Important;
+  border-color: #fff !Important;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+a.btn.btn-primary.centerButtons.customButton:hover{
+
+  background-color: #ce873b !Important;
+}
 
 /* MEDIA QUERY  for resizing window */
 
@@ -168,7 +190,6 @@ legend {
 
   .btn-lg {
   position: relative;
-  top: 200px;
 }
 
   
@@ -177,7 +198,6 @@ legend {
 
   .btn-lg {
   position: relative;
-  top: 200px;
   font-size: 25px !Important;
 }
 
@@ -200,4 +220,4 @@ legend {
 
  
 
-	
+  
