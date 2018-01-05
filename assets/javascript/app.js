@@ -1,5 +1,5 @@
 $(document).ready(function(){
-//get YouTube videos
+//get YouTube videos -Sarika
   function displayYoutube5() {
 
           var topic = "cooking techniques";
@@ -96,10 +96,6 @@ $(document).ready(function(){
         var apiKey = "44952938118975f4434da59356ed9033";
 
         var queryURL = "https://api.edamam.com/search?q=" + foodSelection + "&app_id=" + appId + "&app_key=" + apiKey + "&calories=" + calories + "&health=" + dietaryRestrictions;
-     
-        // var apiKey = "44952938118975f4434da59356ed9033";
-
-        // var queryURL = "https://api.edamam.com/search?q=" + foodSelection + "&api_key=" + apiKey + "&calories=" + calories  //+ "&health="  + dietaryRestrictions
         
 
         
@@ -297,7 +293,7 @@ $(document).ready(function(){
          $(".customButton").remove();
 
 
-//FIREBASE ELEMENT//
+//FIREBASE ELEMENT//- taimoor
 
 var config = {
     apiKey: "AIzaSyDqU6NAXBzTo2oAZDPha9vSD9wkFuiJi5U",

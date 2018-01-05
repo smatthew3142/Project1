@@ -86,7 +86,7 @@ a.overImage:link {
 
 
 
-/*STYLING MODAL*/
+/*STYLING MODAL- Miles*/
 fieldset.group  { 
   margin: 0; 
   padding: 0; 
@@ -178,6 +178,9 @@ a.btn.btn-primary.centerButtons.customButton{
   font-size: 30px;
   margin-bottom: 5px;
 }
+
+/*END RECIPE MODAL*/
+
 
 a.btn.btn-primary.centerButtons.customButton:hover{
 
