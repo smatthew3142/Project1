@@ -179,13 +179,43 @@ a.btn.btn-primary.centerButtons.customButton{
   margin-bottom: 5px;
 }
 
-/*END RECIPE MODAL*/
-
-
 a.btn.btn-primary.centerButtons.customButton:hover{
 
   background-color: #ce873b !Important;
 }
+
+/*END RECIPE MODAL*/
+
+/*TABLE*/
+.user-table h4{
+  font-size: 16px;
+  margin: 0px !Important;
+
+}
+/*END TABLE*/
+.panel-heading{
+  color: #fff!Important;
+  background-color: #c62f43 !Important;
+}
+
+/*CALORIE CALCULATOR*/
+
+.calorie-panel{
+  margin: 20px;
+}
+
+.btn-primary {
+  color: #fff!Important;
+  background-color: #c62f43 !Important;
+  border-color: white !Important;
+}
+
+.fa-pencil::before{
+  color: #c62f43 !Important;
+}
+
+
+
 
 /* MEDIA QUERY  for resizing window */
 
