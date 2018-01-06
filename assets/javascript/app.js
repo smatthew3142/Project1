@@ -67,6 +67,58 @@ $(document).ready(function(){
         // $("#inputMax").val("");
     });
 
+
+   //FIREBASE ELEMENT//- SARIKA
+    var config = {
+    apiKey: "AIzaSyDqU6NAXBzTo2oAZDPha9vSD9wkFuiJi5U",
+    authDomain: "rutgerssuperfoods-d50a1.firebaseapp.com",
+    databaseURL: "https://rutgerssuperfoods-d50a1.firebaseio.com",
+    projectId: "rutgerssuperfoods-d50a1",
+    storageBucket: "rutgerssuperfoods-d50a1.appspot.com",
+    messagingSenderId: "1009521301428"
+  };
+
+  firebase.initializeApp(config);
+
+  var database = firebase.database();
+
+  $("body").on("click","#submit",function(event){
+    
+    event.preventDefault();
+
+  var userName = $("#inputName").val().trim();
+  var userFood = $("#inputFood").val().trim();
+  var userMax = $("#inputMax").val().trim();
+  var userMin = $("#inputMin").val().trim();
+
+  var newUser = {
+    name: userName,
+    food: userFood,
+    maxCal: userMax,
+    minCal: userMin
+  };
+
+  database.ref().push(newUser);
+
+  });
+
+database.ref().on("child_added", function(childSnapshot, prevChildKey){
+  
+  console.log(childSnapshot.val());
+
+  
+  var userName = childSnapshot.val().name;
+  var userFood = childSnapshot.val().food;
+  var userMax = childSnapshot.val().maxCal;
+  var userMin = childSnapshot.val().minCal;
+
+
+
+  // Add each user data into the table
+  $("#user-table > tbody").append("<tr><td>" + userName + "</td><td>" + userFood + "</td><td>" +
+  userMin +"-"+ userMax + "</td><tr>");
+});
+
 /////// Chris Code ////
 
   var calories;
@@ -95,8 +147,15 @@ $(document).ready(function(){
         var appId= "d0d831cb"
         var apiKey = "44952938118975f4434da59356ed9033";
 
-        var queryURL = "https://api.edamam.com/search?q=" + foodSelection + "&app_id=" + appId + "&app_key=" + apiKey + "&calories=" + calories + "&health=" + dietaryRestrictions;
+        // var queryURL = "https://api.edamam.com/search?q=" + foodSelection + "&app_id=" + appId + "&app_key=" + apiKey + "&calories=" + calories + "&health=" + dietaryRestrictions;
         
+        if(dietaryRestrictions == undefined){
+          var queryURL = "https://api.edamam.com/search?q=" + foodSelection + "&app_id=" + appId + "&app_key=" + apiKey + "&calories=" + calories;
+        }
+
+        else {
+          var queryURL = "https://api.edamam.com/search?q=" + foodSelection + "&app_id=" + appId + "&app_key=" + apiKey + "&calories=" + calories + "&health=" + dietaryRestrictions;
+        };
 
         
         $.ajax({
@@ -291,24 +350,6 @@ $(document).ready(function(){
   $(document).on("click",".closeModal", function() {
          $(".recipe-modal-body").empty();
          $(".customButton").remove();
-
-
-//FIREBASE ELEMENT//- taimoor
-
-var config = {
-    apiKey: "AIzaSyDqU6NAXBzTo2oAZDPha9vSD9wkFuiJi5U",
-    authDomain: "rutgerssuperfoods-d50a1.firebaseapp.com",
-    databaseURL: "https://rutgerssuperfoods-d50a1.firebaseio.com",
-    projectId: "rutgerssuperfoods-d50a1",
-    storageBucket: "rutgerssuperfoods-d50a1.appspot.com",
-    messagingSenderId: "1009521301428"
-  };
-  firebase.initializeApp(config); 
-
-  var database = firebase.database();
-
-  $()
-
 
 
 
